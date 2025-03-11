@@ -10,6 +10,11 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
+app.get('/test', (req, res) => {
+  console.log('Received request on / route');  // Log to console when this route is hit
+  res.send('Hello World!');
+});
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
