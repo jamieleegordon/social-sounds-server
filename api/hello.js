@@ -1,11 +1,7 @@
-const express = require('express');
-const serverless = require('serverless-http');
+// api/hello.js
 
-const app = express();
+export default function handler(req, res) {
+  res.status(200).send('Hello World!');
+}
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
 
-// Wrap express app into serverless handler
-module.exports.handler = serverless(app);
